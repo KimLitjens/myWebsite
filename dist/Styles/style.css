@@ -4,6 +4,8 @@ body {
   font-family: "poppins", sans-serif;
   color: #d57442;
   background: white;
+  padding-bottom: 70px;
+  text-align: center;
 }
 
 .navbar {
@@ -23,17 +25,16 @@ body {
   font-size: 1.1em;
 }
 
-.main {
-  height: 760px;
-  margin: 20px;
-}
-
 #personName {
   padding: 20px;
 }
 
 #personImg {
   padding: 20px;
+}
+
+.form-control {
+  width: 600px;
 }
 
 .fa-code {
@@ -103,6 +104,16 @@ body {
 footer {
   background-color: #084177;
   color: #d5d5d5;
+  position: relative;
+  margin-top: -150px;
+  /* negative value of footer height */
+  height: 100px;
+  clear: both;
+  padding-top: 20px;
+}
+
+footer .fixed-bottom {
+  padding-right: 0px;
 }
 
 footer a {
