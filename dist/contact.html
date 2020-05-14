@@ -61,30 +61,30 @@
       <div class="col-md-6 text-center">
         <form action="contactform.php" class="contact-form" method="post">
           <div class="form-group">
-            <label for="name">Je naam (verplicht)</label>
+            <label for="name">Your Name (required)</label>
             <input
               type="text"
               class="form-control"
               id="nameForm"
               name="name"
-              placeholder="Naam"
+              placeholder="Your Name"
               required
             />
           </div>
 
           <div class="form-group">
-            <label for="mail">Je e-mailadres (verplicht)</label>
+            <label for="email">Your email (required)</label>
             <input
               type="email"
-              name="mail"
-              id="mail"
+              name="email"
+              id="email"
               class="form-control"
-              placeholder="Email"
+              placeholder="Your email"
               required
             />
           </div>
           <div class="form-group">
-            <label for="subject">Onderwerp</label>
+            <label for="subject">Subject</label>
             <input
               type="text"
               name="subject"
@@ -93,19 +93,24 @@
             />
           </div>
           <div class="form-group">
-            <label for="message">Je bericht (verplicht)</label>
+            <label for="message">Your message (required)</label>
             <textarea
               name="message"
               id="message"
               cols="30"
               rows="5"
-              placeholder="Bericht"
+              placeholder="Your message"
               required
               class="form-control"
             ></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" value="SEND MES">
-            Verzenden
+          <button
+            type="submit"
+            class="btn btn-primary"
+            value="SEND MES"
+            name="submit"
+          >
+            SEND
           </button>
         </form>
       </div>
