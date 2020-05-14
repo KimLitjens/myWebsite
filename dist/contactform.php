@@ -48,13 +48,13 @@ if(isset($_POST['submit'])) {
     $mailFrom = mysqli_real_escape_string($_POST['email']);
     $message = mysqli_real_escape_string($_POST['message']);
 
-    $mailTo = "itisme@kimlitjens.nl";
+    $mailTo = "info@kimlitjens.nl";
     $headers = "From: " . $mailFrom;
     $txt = "You have received a e-mail from: " . $name. ".\n\n".$message;
 
 
     mail($mailTo, $subject, $txt, $headers);
 
-    header("Location: index.html"); 
+    header("Location: index.php?mailsend"); 
 }
 ?> 
