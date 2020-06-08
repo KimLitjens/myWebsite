@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-168814977-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-168814977-1");
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -55,9 +70,8 @@
     </nav>
     <!-- main -->
 
-    <div class="container">
+    <div class="container ">
       <div class="formBx">
-    
         <form
           data-netlify="true"
           class=" needs-validation"
@@ -67,14 +81,13 @@
           action="/dist/index.html?succesfull"
           novalidate
         >
-        <h2>Contact me</h2>
+          <h2>Contact me</h2>
           <div class="form-group inputBox">
             <input
               type="text"
               class="form-control"
               id="nameForm"
               name="name"
-              
               required
             />
             <span>Full Name</span>
@@ -121,20 +134,13 @@
             </div> -->
           </div>
           <div data-netlify-recaptcha="true"></div>
-          <button
-            type="submit"
-            class="btn"
-            value="SEND MES"
-            name="submit"
-          >
+          <button type="submit" class="btn" value="SEND MES" name="submit">
             SEND
           </button>
         </form>
       </div>
     </div>
 
-
-    </div>
     <!--- Footer -->
     <footer class="navbar fixed-bottom">
       <div class="container-fluid ">
