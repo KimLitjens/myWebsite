@@ -33,12 +33,12 @@
 
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md sticky-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <h1>
+    <nav class="navbar navbar-expand-md sticky-top p-0">
+      <div class="container-fluid ">
+        <a class="navbar-brand " href="#">
+          <h2>
             Kim Litjens
-          </h1>
+          </h2>
         </a>
         <button
           class="navbar-toggler"
@@ -91,9 +91,9 @@
               required
             />
             <span>Full Name</span>
-            <!-- <div class="invalid-feedback">
+            <div class="invalid-feedback">
               Please fill in your name.
-            </div> -->
+            </div>
           </div>
 
           <div class="form-group inputBox">
@@ -105,9 +105,9 @@
               required
             />
             <span>Email Address</span>
-            <!-- <div class="invalid-feedback">
+            <div class="invalid-feedback">
               Please fill in your email.
-            </div> -->
+            </div>
           </div>
           <div class="form-group inputBox">
             <input
@@ -118,6 +118,9 @@
               required
             />
             <span>Subject</span>
+            <div class="invalid-feedback">
+              Please fill in the subject.
+            </div>
           </div>
           <div class="form-group inputBox">
             <textarea
@@ -129,12 +132,18 @@
               class="form-control"
             ></textarea>
             <span>Type Your Message Here...</span>
-            <!-- <div class="invalid-feedback">
+            <div class="invalid-feedback">
               Please fill in your message.
-            </div> -->
+            </div>
           </div>
           <div data-netlify-recaptcha="true"></div>
-          <button type="submit" class="btn" value="SEND MES" name="submit">
+          <button
+            id="henk"
+            type="submit"
+            class="btn"
+            value="SEND MES"
+            name="submit"
+          >
             SEND
           </button>
         </form>
@@ -143,9 +152,10 @@
 
     <!--- Footer -->
     <footer class="navbar fixed-bottom">
+      <div class="container-fluid "></div>
       <div class="container-fluid ">
-        <div class="row text-center col-12 social ">
-          <p>Kim Litjens</p>
+        <div class="row text-center col-12 social align-middle">
+          <p class="m-0">Kim Litjens</p>
           <a href="#"><i class="fab fa-facebook"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-google-plus-g"></i></a>
@@ -182,5 +192,23 @@
         false
       );
     })();
+  </script>
+  <script>
+    const buttons = document.getElementById("henk");
+
+    buttons.addEventListener("mouseenter", function(e) {
+      let x = e.clientX - e.target.offsetLeft;
+      let y = e.clientY - e.target.offsetTop;
+
+      let ripples = document.createElement("span");
+      ripples.style.left = x + "px";
+      ripples.style.top = y + "px";
+      this.appendChild(ripples);
+
+      setTimeout(() => {
+        ripples.remove();
+      }, 1000);
+      console.log(this.appendChild(ripples));
+    });
   </script>
 </html>
